@@ -1,0 +1,26 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Session {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now()) @db.Timestamp(0)
+  finished     Boolean  @default(false)
+  projectNotes String?  @db.Text
+  userId       Int
+  user         User     @relation(fields: [userId], references: [id], onUpdate: Restrict, map: "Session_ibfk_1")
+
+  @@index([userId], map: "userId")
+}
+
+model User {
+  id      Int       @id @default(autoincrement())
+  name    String?   @db.VarChar(255)
+  email   String    @unique(map: "email") @db.VarChar(255)
+  Session Session[]
+}
