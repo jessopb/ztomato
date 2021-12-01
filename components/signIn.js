@@ -3,7 +3,7 @@ import Button from './button';
 export default function SignIn(props){
     const [session, loading] = useSession();
     return (
-        <div class="flex items-center justify-between md:justify-end space-x-1 text-gray-700 p-1 w-full md:w-96">
+        <div className="flex items-center justify-between md:justify-end space-x-1 text-gray-700 p-1 w-full md:w-96">
             {!session && (
                 <>
                     <Button type="text" text="Sign In" onClick={() => signIn()} />

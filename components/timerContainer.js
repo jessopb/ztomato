@@ -3,6 +3,7 @@ const BEGIN = 'begin';
 const WORKING = 'working';
 const BREAK = 'break';
 import Box from './boxes';
+import EndModal from './endModal'
 
 import Button from './button';
 export default function TimerContainer(props){
@@ -17,6 +18,8 @@ export default function TimerContainer(props){
     const totalSeconds = 1500; // 25 minutes = 1500 seconds
     const breakSeconds = 300;
     const remainingSeconds = secondsElapsed ? totalSeconds - secondsElapsed : totalSeconds;
+
+
 
     const getStringForSeconds = (seconds) => {
         if (seconds && seconds === seconds && remainingSeconds) {

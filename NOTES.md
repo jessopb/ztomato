@@ -18,3 +18,5 @@ f4494f Red Salsa O red500
 f1364c Red Salsa red600
 
 # Add Prisma DB Querybuilder
+ - adjust nextauth to use prisma adapter, change schema
+ - npx prisma migrate dev creates db
