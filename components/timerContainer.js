@@ -15,7 +15,9 @@ export default function TimerContainer(props){
     const [startTime, setStartTime] = React.useState();
     const [currentTime, setCurrentTime] = React.useState();
     const secondsElapsed = startTime && currentTime ? (currentTime - startTime) / 1000 : 0;
+    // const totalSeconds = 30; // 25 minutes = 1500 seconds
     const totalSeconds = 1500; // 25 minutes = 1500 seconds
+
     const breakSeconds = 300;
     const remainingSeconds = secondsElapsed ? totalSeconds - secondsElapsed : totalSeconds;
 
@@ -56,7 +58,6 @@ export default function TimerContainer(props){
     const handleDone = (grade) => {
         // send grade
         // clear grade and endNotes
-        setGrade(grade)
         setStage(BEGIN);
     }
 

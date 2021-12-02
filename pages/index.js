@@ -6,6 +6,9 @@ import SignIn from '../components/signIn'
 import Button from '../components/button'
  
 export default function Page() {
+  if ("Notification" in window) {
+    Notification.requestPermission();
+  }
   const [session, loading] = useSession();
 
   return (
