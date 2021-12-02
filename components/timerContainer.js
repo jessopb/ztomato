@@ -90,7 +90,7 @@ export default function TimerContainer(props){
             <div  className={"flex flex-col justify-items-center pt-4 pb-4 min-h-md relative"}>
                 {(stage === BEGIN || stage === BREAK) && <Button type="primary" text="Start" onClick={() => handleStart(Date.now())} />}
                 {stage === WORKING && (<Button type="primary" text="Stop" onClick={() => handleStop()} />)}
-                    <div class="mb-4 flex items-center">
+                    <div className="mb-4 flex items-center">
                         <input className={`appearance-none border border-green-400 rounded-lg m-2 py-2 px-3 bg-green-900 placeholder-green-500 text-green-300 w-full leading-tight`} value={notes} onChange={handleNotes} id="notes" type="text" placeholder="Notes: PR#1337" />
                     </div>
 

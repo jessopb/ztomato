@@ -7,7 +7,7 @@ export default function Box(props) {
     const squares = [];
     for(let i = 0; i < 25; i++) {
         squares.push(
-        <div className={ i < minutes ? 'p-4 bg-green-900 border border-green-400' : 'p-4 bg-green-700 border border-green-400'}></div>
+        <div key={`box${i}`} className={ i < minutes ? 'p-4 bg-green-900 border border-green-400' : 'p-4 bg-green-700 border border-green-400'}></div>
         )
     }
     return <div
