@@ -1,7 +1,7 @@
-import { signIn, signOut, useSession } from "next-auth/client"
+import { signIn, signOut, useSession } from "next-auth/react"
 import Button from './button';
 export default function SignIn(props){
-    const [session, loading] = useSession();
+    const { data: session } = useSession();
     return (
         <div className="flex items-center justify-between md:justify-end space-x-1 text-gray-700 p-1 w-full md:w-96">
             {!session && (

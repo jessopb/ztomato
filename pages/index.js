@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { signIn, signOut, useSession } from "next-auth/client"
+import { signIn, signOut, useSession } from "next-auth/react"
 
 import TimerContainer from '../components/timerContainer'
 import SignIn from '../components/signIn'
@@ -9,7 +9,7 @@ export default function Page() {
   if (typeof window !== "undefined" && "Notification" in window) {
     Notification.requestPermission();
   }
-  const [session, loading] = useSession();
+  const { data: session } = useSession();
 
   return (
       <div className="flex flex-col items-center justify-center">
