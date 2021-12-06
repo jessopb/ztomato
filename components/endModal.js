@@ -5,7 +5,6 @@ export default function EndModal(props){
     const { notes, done } = props;
     const [grade, setGrade] = React.useState('');
     const [endNotes, setEndNotes] = React.useState('');
-    console.log('rendering')
 
     const handleDone = () => {
         done();
@@ -18,7 +17,6 @@ export default function EndModal(props){
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-        console.log('data', event)
         try {
             const req = await fetch('api/tomato', {
                 method: 'POST',
@@ -32,7 +30,6 @@ export default function EndModal(props){
             const res = await req.json();
             handleDone();
         } catch (e) {
-            console.log('dont')
         }
     }
 

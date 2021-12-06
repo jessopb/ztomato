@@ -4,11 +4,9 @@ import { prisma } from "../../util/db"
 
 export default async function writeTomato(req, res) {
   const session = await getSession({ req })
-  console.log('session', session)
     if (session && req.method === 'POST') {
       try {
         const bodydata = JSON.parse(req.body);
-        console.log('data', bodydata)
 
         const result = await prisma.tomatoSessions.create({
           data: {
