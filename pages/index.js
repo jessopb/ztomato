@@ -1,10 +1,23 @@
 import Head from 'next/head'
-import { signIn, signOut, useSession } from "next-auth/react"
+import { signIn, signOut, useSession, getSession } from "next-auth/react"
 
 import TimerContainer from '../components/timerContainer'
 import SignIn from '../components/signIn'
 import Button from '../components/button'
  
+// export const getServerSideProps = async (context) => {
+//   const { req, res } = context;
+//   const session = await getSession(context);
+
+//   // const posts = await prisma.tomatoSessions.findMany({
+//   //   where: {
+//   //     // like, today or something
+//   //   },
+//   // })
+//   return { props: { posts, session } }
+// }
+// then display today summary
+
 export default function Page() {
   if (typeof window !== "undefined" && "Notification" in window) {
     Notification.requestPermission();

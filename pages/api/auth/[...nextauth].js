@@ -6,7 +6,6 @@ import * as Prisma from "@prisma/client"
 const prisma = new Prisma.PrismaClient()
 
 export default NextAuth({
-    // Configure one or more authentication providers
     adapter: PrismaAdapter(prisma),
     providers: [
         GithubProvider({
@@ -15,7 +14,4 @@ export default NextAuth({
         }),
         // ...add more providers here
     ],
-
-    // A database is optional, but required to persist accounts in a database
-    // database: process.env.DATABASE_URL,
 })

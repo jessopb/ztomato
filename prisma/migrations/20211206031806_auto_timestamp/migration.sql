@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `TomatoSessions` MODIFY `timestamp` DATETIME(3) DEFAULT CURRENT_TIMESTAMP(3);

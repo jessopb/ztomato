@@ -61,13 +61,7 @@ model TomatoSessions {
   user      User      @relation(fields: [userId], references: [id])
   project   String?
   projectId String?
-  timestamp DateTime?
+  timestamp DateTime? @default(now())
   notes     String?
-  grade     Grade     @default(GOOD)
-}
-
-enum Grade {
-  GREAT
-  GOOD
-  POOR
+  grade     Int?      @default(2)
 }

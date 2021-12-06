@@ -6,13 +6,13 @@ export default function SignIn(props){
         <div className="flex items-center justify-between md:justify-end space-x-1 text-gray-700 p-1 w-full md:w-96">
             {!session && (
                 <>
-                    <Button type="text" text="Sign In" onClick={() => signIn()} />
+                    <Button button="text" text="Sign In" onClick={() => signIn()} />
                 </>
             )}
             {session && (
                 <>
                     <span>Signed in as {session.user.email || session.user.name}{' '}</span>
-                    <Button type="text" text="Sign Out" onClick={() => signOut()} />
+                    <Button button="text" text="Sign Out" onClick={() => signOut()} />
                 </>
             )}
         </div>

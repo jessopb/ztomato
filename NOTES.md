@@ -8,15 +8,13 @@ npx create-next-app -e with-tailwindcss zeppitomato
    - Auth callback url (http://localhost:3000/api/auth/callback/github)
    - Access to email? or session.user.name || session.user.email
 
+# Tailwind
 https://byrayray.dev/posts/2020-12-27-why-use-tailwind-css-with-nextjs
-// use classes directly or specify classes.
-
-787878 Sonic Silver coolGray400
-d4d3d3 Light Gray coolGray300
-feecef Lavender Blush red100
-f4494f Red Salsa O red500
-f1364c Red Salsa red600
 
 # Add Prisma DB Querybuilder
  - adjust nextauth to use prisma adapter, change schema
  - npx prisma migrate dev creates db
+
+# Package for docker
+https://medium.com/bb-tutorials-and-thoughts/next-js-local-development-with-docker-compose-7b1954292a1f
+

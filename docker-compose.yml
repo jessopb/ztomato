@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   tomato:
-    image: jessopb/zeppitomato:${ZEPPI_VERSION}
+    image: jessopb/zeppitomato:${ZEPPITOMATO_VERSION}
     ports:
       - 3000:3000
     build:
